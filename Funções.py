@@ -89,9 +89,10 @@ def reservar_assentos(sessao, cadeiras_sala):
             escolha = int(input("Comprar mais ingressos? (1 - Sim / 2 - Não)"))
             escolha = validacao(escolha, 2)
         else:
+            print(f"\nQuantidade de ingressos inválida!")
+            print(f"\nA quantidade de ingressos disponíveis são: {cadeiras_sala}")
             if cadeiras_sala == 0:
                  print("Sala lotada!")
                  return cadeiras_sala
-            print(f"\nQuantidade de ingressos inválida!")
-            print(f"\nA quantidade de ingressos disponíveis são: {cadeiras_sala}")       
     return cadeiras_sala
+
